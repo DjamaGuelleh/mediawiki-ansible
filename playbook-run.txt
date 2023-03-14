@@ -1,0 +1,12 @@
+################ Installation de Apache #######################################
+
+ ansible-playbook -i inventaire.ini --user user-ansible --become --ask-become-pass install-apache.yml
+ 
+################ Installation MariaDB #########################################
+
+ansible-playbook -i inventaire.ini --user user-ansible --become --ask-become-pass install-mariadb.yml
+
+############### Installation de MediaWiki ######################################
+
+ansible-playbook -i inventaire.ini --user user-ansible --become --ask-become-pass --ask-vault-pass
+install-mediawiki.yml
